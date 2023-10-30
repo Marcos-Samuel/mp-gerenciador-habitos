@@ -7,6 +7,7 @@ export default function DayState({ day }: { day: boolean | undefined }) {
     "gray mark",
     12,
   ];
+
   day
     ? (image = ["/images/check.svg", "green check mark", 24])
     : day === undefined
@@ -16,7 +17,7 @@ export default function DayState({ day }: { day: boolean | undefined }) {
   const [src, alt, size] = image;
 
   return (
-    <div className="">
+    <div className="flex items-center justify-center h-9">
       <Image src={src} alt={alt} width={size} height={size} />
     </div>
   );
